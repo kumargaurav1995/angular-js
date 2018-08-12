@@ -1,0 +1,21 @@
+<html ng-app="detailsModule">
+<head>
+<title>Student_Details</title>
+<script src = "angular.js"></script>
+<script src = "detais.js"></script>
+
+</head>
+<body ng-controller="detailsCtrl">
+    <h1>Student Details</h1>
+<p ng-controller="consoleCtrl">Name: <input type="text" ng-change="textboxChange()" ng-model="textString"</input></p>
+<p>Graduation Done :<input type="checkbox" ng-model="booleanValue"></input></p>
+<p>Date Of Registration :<input type="date" ng-model="dateValue"</p>
+<p>Subject opted:
+    <input type="radio" ng-model="radioValue" value="MySql">MySql</input>
+    <input type="radio" ng-model="radioValue" value="Java">Java</input>
+        </p>
+        <button ng-click="updateDetails()">Update Details</button>
+        </p>
+        <h2>{{up1}}  </h2>
+</body>
+</html>

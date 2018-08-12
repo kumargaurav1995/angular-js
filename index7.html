@@ -1,0 +1,53 @@
+<html ng-app="moreDirectivesModule">
+
+<head>
+    <script src="angular.js"></script>
+    <script src="hideShow.js"></script>
+    <script src="myModule.js"></script>
+</head>
+
+<body>
+    <h1>More Directives</h1>
+    <div ng-controller="MoreDirectivesCtrl1 as ctrl1">
+        <input type="checkbox" ng-model="ctrl1.checked"></input>
+        <p ng-if="ctrl1.checked">I am here!!</p>
+    </div>
+
+    <div ng-controller="MoreDirectivesCtrl2 as ctrl2"></div>
+    <input type="checkbox" ng-model="ctrl2.checked"></input>
+    <p ng-show="ctrl2.checked">I am there!!</p>
+    </div>
+
+    <div ng-controller="MoreDirectivesCtrl3 as ctrl3"></div>
+    <input type="checkbox" ng-model="ctrl3.checked"></input>
+    <p ng-hide="!ctrl3.checked">I am again here!!</p>
+    </div>
+
+    <div ng-controller="MoreDirectivesCtrl4 as ctrl4">
+        <div ng-repeat="i in ctrl4.mylist">
+            <p>Hello </p>
+            <p>there!!</p>
+        </div>
+    </div>
+    <div ng-controller="MoreDirectivesCtrl5 as ctrl5">
+        <div ng-repeat="i in ctrl5.mylist">
+            <p>{{i}}</p>
+        </div>
+    </div>
+    <div ng-controller="MoreDirectivesCtrl6 as ctrl6">
+        <div ng-repeat="obj in ctrl6.mylist">
+            <p> {{$index+1}}
+                . Name : {{obj.name}}</p>
+            <p>Age : {{obj.age}}</p>
+            <hr>
+        </div>
+    </div>
+<div ng-controller="MoreDirectivesCtrl7 as ctrl7";
+{{ctrl7.helloMessage}}
+</div>
+<div ng-controller="HelloCtrl as ctrl";
+{{ctrl.helloMessage}}
+</div>
+</body>
+
+</html>
